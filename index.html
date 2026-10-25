@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCC Softech – IT Courses in Cloud, Networking & Security | Laptop & Desktop on Rent</title>
+<meta name="description" content="SCC Softech IT Solutions: live online training in AWS, Azure, GCP, DevOps, CCNA, Linux, Windows Server, Oracle DBA and CEH with interview preparation and job assistance. Plus laptop and desktop rental for offices, events and training. Since 2009.">
+<meta name="keywords" content="AWS training online, Azure course, DevOps course, CCNA course, Linux training, Oracle DBA course, laptop on rent Gurgaon, laptop on rent Noida, laptop rental Delhi, desktop on rent Pune">
+<meta property="og:title" content="SCC Softech – IT Training & Laptop Rental">
+<meta property="og:description" content="Live online IT courses with hands-on labs and job assistance. Laptops and desktops on rent for offices, events and training.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://sccsoftech.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "SCC Softech IT Solutions",
+  "alternateName": "Sanvi Computers & Cloud",
+  "url": "https://sccsoftech.com/",
+  "telephone": "+91-90495-86191",
+  "email": "sccsoftechitsolutions@gmail.com",
+  "foundingDate": "2009",
+  "address": {"@type": "PostalAddress","streetAddress": "Near Chinchwad Railway Station","addressLocality": "Pune","addressRegion": "Maharashtra","postalCode": "411019","addressCountry": "IN"},
+  "sameAs": ["https://www.facebook.com/sccsoftech","https://www.instagram.com/sccsoftech/","https://twitter.com/SccSoftech","https://www.youtube.com/@SCCSoftech"]
+}
+</script>
+<style>
+:root{
+  --ink:#16202A;
+  --ink-soft:#4A5866;
+  --paper:#F4F7F6;
+  --white:#FFFFFF;
+  --board:#0D5C4B;      /* circuit-board green */
+  --board-deep:#08392F;
+  --led:#F2A900;        /* status-LED amber */
+  --line:#D6E0DD;
+  --term:#0B1F1A;
+  --radius-s:6px;
+  --radius-m:14px;
+  --wrap:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Bricolage Grotesque",Manrope,sans-serif;line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4.2vw,46px);font-weight:800;max-width:20ch}
+h3{font-size:21px;font-weight:700}
+p{max-width:65ch}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+.lede{color:var(--ink-soft);font-size:18px;margin-top:14px}
+:focus-visible{outline:3px solid var(--led);outline-offset:3px;border-radius:4px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:16px;text-decoration:none;padding:14px 22px;border-radius:999px;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:background .15s,color .15s}
+.btn-primary{background:var(--led);color:var(--ink)}
+.btn-primary:hover{background:#FFBE21}
+.btn-ghost{border-color:currentColor;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-dark{background:var(--board);color:#fff}
+.btn-dark:hover{background:var(--board-deep)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(244,247,246,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:38px;height:38px;border-radius:9px;background:var(--board);display:grid;place-items:center}
+.logo-text{font-family:"Bricolage Grotesque";font-weight:800;font-size:20px;line-height:1}
+.logo-text small{display:block;font-family:Manrope;font-weight:600;font-size:11px;color:var(--ink-soft);letter-spacing:.02em;margin-top:3px}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{text-decoration:none;font-weight:600;font-size:15px;color:var(--ink-soft)}
+.nav-links a:hover{color:var(--board)}
+.nav .btn{padding:10px 18px;font-size:15px}
+.menu-btn{display:none;background:none;border:0;padding:8px;cursor:pointer}
+@media (max-width:920px){
+  .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);flex-direction:column;padding:16px 20px 24px;border-bottom:1px solid var(--line);gap:16px}
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+  .nav .btn-call{display:none}
+}
+
+/* hero */
+.hero{background:var(--board);color:#fff;padding:72px 0 0;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:
+  linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:44px 44px;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative}
+.hero h1{font-size:clamp(38px,5.6vw,66px);font-weight:800;max-width:15ch}
+.hero .lede{color:#CFE5DF;font-size:19px;max-width:52ch}
+.since{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;color:#CFE5DF;margin-bottom:22px}
+.since i{width:9px;height:9px;border-radius:50%;background:var(--led);box-shadow:0 0 10px var(--led)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.terminal{background:var(--term);border-radius:var(--radius-m);border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 60px rgba(0,0,0,.35);font-family:"JetBrains Mono",monospace;font-size:14px;overflow:hidden}
+.term-bar{display:flex;gap:7px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.08);align-items:center}
+.term-bar span{width:11px;height:11px;border-radius:50%;background:#2E4A43}
+.term-bar b{margin-left:10px;font-weight:400;font-size:12px;color:#7FA79C}
+.term-body{padding:18px 18px 22px;min-height:290px;color:#BFE0D6;line-height:1.75;white-space:pre-wrap;word-break:break-word}
+.term-body .p{color:var(--led)}
+.term-body .ok{color:#6EE7B7}
+.term-body .dim{color:#6C8C83}
+.cursor{display:inline-block;width:8px;height:16px;background:#BFE0D6;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.paths{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:64px;border-top:1px solid rgba(255,255,255,.15)}
+.path{display:block;padding:26px 28px 30px;text-decoration:none;color:#fff;transition:background .15s}
+.path:first-child{border-right:1px solid rgba(255,255,255,.15)}
+.path:hover{background:rgba(255,255,255,.06)}
+.path h3{font-size:24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.path p{color:#CFE5DF;margin-top:6px;font-size:16px}
+@media (max-width:920px){
+  .hero-grid{grid-template-columns:1fr}
+  .paths{grid-template-columns:1fr}
+  .path:first-child{border-right:0;border-bottom:1px solid rgba(255,255,255,.15)}
+}
+
+/* proof strip */
+.proof{background:var(--white);border-bottom:1px solid var(--line);padding:30px 0}
+.proof-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.proof-item strong{display:block;font-family:"Bricolage Grotesque";font-size:22px;font-weight:700}
+.proof-item span{color:var(--ink-soft);font-size:15px}
+@media (max-width:760px){.proof-row{grid-template-columns:1fr 1fr}}
+
+/* courses */
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tab{font-family:inherit;font-weight:600;font-size:15px;border:1.5px solid var(--line);background:var(--white);padding:8px 16px;border-radius:999px;cursor:pointer;color:var(--ink-soft)}
+.tab[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.course-list{border-top:2px solid var(--ink)}
+.course{display:grid;grid-template-columns:1.3fr 2fr .7fr auto;gap:24px;align-items:center;padding:22px 4px;border-bottom:1px solid var(--line)}
+.course[hidden]{display:none}
+.course h3{font-size:20px}
+.course .cat{font-size:13px;font-weight:600;color:var(--board)}
+.course p{color:var(--ink-soft);font-size:15.5px}
+.course .dur{font-weight:700;font-size:15px;white-space:nowrap}
+.course .dur small{display:block;font-weight:500;color:var(--ink-soft);font-size:13px}
+.course a{font-weight:700;font-size:15px;color:var(--board);text-decoration:none;white-space:nowrap;border-bottom:2px solid var(--led)}
+@media (max-width:860px){
+  .course{grid-template-columns:1fr auto;gap:8px 16px}
+  .course p{grid-column:1/-1}
+  .course a{grid-column:1/-1;justify-self:start}
+}
+
+/* career programs */
+.programs{background:var(--ink);color:#fff}
+.programs .lede{color:#B8C4CC}
+.program-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.program{border:1px solid #34424F;border-radius:var(--radius-m);padding:26px 22px;display:flex;flex-direction:column;gap:12px}
+.program .len{font-family:"Bricolage Grotesque";font-size:38px;font-weight:800;color:var(--led);line-height:1}
+.program .len small{font-size:16px;font-weight:600;color:#B8C4CC;margin-left:4px}
+.program p{color:#B8C4CC;font-size:15px;flex:1}
+.program a{color:#fff;font-weight:700;font-size:15px}
+@media (max-width:980px){.program-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.program-grid{grid-template-columns:1fr}}
+
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:44px;counter-reset:s}
+.step{border-top:3px solid var(--board);padding-top:18px}
+.step::before{counter-increment:s;content:"Step " counter(s);font-weight:700;font-size:14px;color:var(--board)}
+.step h3{margin:6px 0 8px;font-size:19px}
+.step p{color:var(--ink-soft);font-size:15.5px}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* rental */
+.rental{background:var(--white)}
+.rental-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.config{width:100%;border-collapse:collapse;margin-top:28px;font-size:15.5px}
+.config th{text-align:left;font-size:13px;color:var(--ink-soft);font-weight:600;padding:0 10px 10px 0;border-bottom:2px solid var(--ink)}
+.config td{padding:14px 10px 14px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.config td:first-child{font-weight:700}
+.uses{display:grid;gap:14px}
+.use{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px;border:1px solid var(--line);border-radius:var(--radius-m);background:var(--paper)}
+.use svg{width:44px;height:44px;padding:9px;border-radius:10px;background:var(--board);color:#fff}
+.use h3{font-size:18px}
+.use p{color:var(--ink-soft);font-size:15px;margin-top:2px}
+.areas{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.areas span{background:#E3EEEA;color:var(--board-deep);font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px}
+.rental-cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}
+.note{font-size:14px;color:var(--ink-soft);margin-top:14px}
+@media (max-width:920px){.rental-grid{grid-template-columns:1fr;gap:36px}}
+
+/* bundle */
+.bundle{padding:0}
+.bundle-box{background:var(--led);border-radius:var(--radius-m);padding:44px;display:grid;grid-template-columns:1.4fr auto;gap:32px;align-items:center;margin-top:-1px}
+.bundle-box h2{font-size:clamp(26px,3.4vw,38px);max-width:24ch}
+.bundle-box p{margin-top:10px;font-size:17px}
+@media (max-width:760px){.bundle-box{grid-template-columns:1fr;padding:30px 24px}}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.svc{padding:28px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white)}
+.svc h3{font-size:19px}
+.svc p{color:var(--ink-soft);font-size:15.5px;margin-top:8px}
+@media (max-width:860px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.svc-grid{grid-template-columns:1fr}}
+
+/* why + trainer */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.why-list{list-style:none;margin-top:28px;display:grid;gap:20px}
+.why-list li{display:grid;grid-template-columns:28px 1fr;gap:14px}
+.why-list svg{width:28px;height:28px;color:var(--board)}
+.why-list strong{display:block;font-size:17.5px}
+.why-list span{color:var(--ink-soft);font-size:15.5px}
+.trainer{background:var(--white);border:1px solid var(--line);border-radius:var(--radius-m);padding:32px}
+.trainer-top{display:flex;gap:18px;align-items:center}
+.avatar{width:76px;height:76px;border-radius:50%;background:var(--board);color:#fff;display:grid;place-items:center;font-family:"Bricolage Grotesque";font-size:28px;font-weight:800;flex:none}
+.trainer h3{font-size:24px}
+.trainer .role{color:var(--ink-soft);font-size:15px}
+.trainer p{margin-top:18px;color:var(--ink-soft);font-size:16px}
+.trainer .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.trainer .tags span{border:1.5px solid var(--line);padding:5px 12px;border-radius:999px;font-size:14px;font-weight:600}
+.reviews-cta{margin-top:22px;padding-top:22px;border-top:1px solid var(--line);font-size:15.5px}
+@media (max-width:920px){.why-grid{grid-template-columns:1fr}}
+
+/* faq */
+.faq{background:var(--white)}
+.faq-list{margin-top:34px;border-top:2px solid var(--ink);max-width:860px}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:700;font-size:18px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:14px;font-size:28px;font-weight:400;color:var(--board);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 22px;color:var(--ink-soft)}
+
+/* contact */
+.contact{background:var(--board);color:#fff}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+.contact .lede{color:#CFE5DF}
+.contact-info{margin-top:30px;display:grid;gap:18px}
+.contact-info div{display:grid;grid-template-columns:24px 1fr;gap:14px}
+.contact-info svg{width:24px;height:24px;color:var(--led)}
+.contact-info a{text-decoration:none;font-weight:600}
+.contact-info span{color:#CFE5DF;font-size:15px}
+form{background:var(--white);color:var(--ink);border-radius:var(--radius-m);padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form h3{grid-column:1/-1;font-size:22px}
+form .full{grid-column:1/-1}
+label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line);border-radius:var(--radius-s);background:var(--paper);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--board);background:#fff}
+textarea{min-height:96px;resize:vertical}
+.form-note{grid-column:1/-1;font-size:13.5px;color:var(--ink-soft)}
+.form-error{grid-column:1/-1;color:#B42318;font-weight:600;font-size:14px;display:none}
+@media (max-width:920px){.contact-grid{grid-template-columns:1fr}}
+@media (max-width:520px){form{grid-template-columns:1fr;padding:24px}}
+
+/* footer */
+footer{background:var(--ink);color:#B8C4CC;padding:56px 0 28px;font-size:15px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer h4{color:#fff;font-size:16px;margin-bottom:14px;font-family:"Bricolage Grotesque"}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.foot-bottom{border-top:1px solid #34424F;margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px}
+@media (max-width:860px){.foot-grid{grid-template-columns:1fr 1fr}}
+
+/* whatsapp float */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.wa-float svg{width:32px;height:32px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="SCC Softech home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2A900" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-5-6-5"/><path d="M12 19h8"/></svg>
+      </span>
+      <span class="logo-text">SCC Softech<small>IT Training · Rentals · Services</small></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#programs">Career programs</a></li>
+      <li><a href="#rental">Laptop rental</a></li>
+      <li><a href="#services">IT services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary btn-call" href="tel:+919049586191">Call +91 90495 86191</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks" id="menuBtn">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="since"><i aria-hidden="true"></i>Training IT professionals since 2009</div>
+        <h1>Learn the IT skills companies hire for.</h1>
+        <p class="lede">Live online classes in Cloud, DevOps, Networking, Linux, Windows Server, Oracle and Cyber Security — with real lab practice, interview preparation and job assistance. Need hardware too? We rent laptops and desktops.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact" data-topic="Free demo class">Book a free demo class</a>
+          <a class="btn btn-ghost" href="#courses">See all courses</a>
+        </div>
+      </div>
+      <div class="terminal" aria-label="Example of a hands-on cloud lab session">
+        <div class="term-bar"><span></span><span></span><span></span><b>student@scc-lab: ~</b></div>
+        <div class="term-body" id="term" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="paths">
+      <a class="path" href="#courses">
+        <h3>I want to learn IT <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2A900" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+        <p>14 courses and 4 career programs, 1 month to 1 year.</p>
+      </a>
+      <a class="path" href="#rental">
+        <h3>I need laptops on rent <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2A900" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+        <p>Daily, weekly or monthly. Single units or bulk orders.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF STRIP (replace with real numbers when available) -->
+<div class="proof">
+  <div class="wrap proof-row">
+    <div class="proof-item"><strong>Since 2009</strong><span>15+ years of IT training</span></div>
+    <div class="proof-item"><strong>Live, not recorded</strong><span>Ask questions in every class</span></div>
+    <div class="proof-item"><strong>Hands-on labs</strong><span>Practise on real cloud consoles</span></div>
+    <div class="proof-item"><strong>Interview prep</strong><span>Mock interviews and job assistance</span></div>
+  </div>
+</div>
+
+<!-- COURSES -->
+<section id="courses">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2>Courses that lead to certifications and jobs</h2>
+        <p class="lede">Every course is taught live online, includes lab practice, and ends with interview preparation.</p>
+      </div>
+      <div class="tabs" role="group" aria-label="Filter courses">
+        <button class="tab" aria-pressed="true" data-filter="all">All</button>
+        <button class="tab" aria-pressed="false" data-filter="cloud">Cloud & DevOps</button>
+        <button class="tab" aria-pressed="false" data-filter="network">Networking</button>
+        <button class="tab" aria-pressed="false" data-filter="systems">Systems & Database</button>
+        <button class="tab" aria-pressed="false" data-filter="security">Security</button>
+      </div>
+    </div>
+
+    <div class="course-list" id="courseList">
+      <div class="course" data-cat="cloud"><div><span class="cat">Cloud & DevOps</span><h3>AWS Cloud</h3></div><p>EC2, S3, VPC, IAM, RDS, load balancing and auto scaling. Prepares you for AWS Certified Solutions Architect – Associate.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="AWS Cloud course">Get fees & syllabus</a></div>
+      <div class="course" data-cat="cloud"><div><span class="cat">Cloud & DevOps</span><h3>Microsoft Azure</h3></div><p>Virtual machines, storage, networking, Entra ID and monitoring. Prepares you for Azure Administrator (AZ-104).</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Azure Cloud course">Get fees & syllabus</a></div>
+      <div class="course" data-cat="cloud"><div><span class="cat">Cloud & DevOps</span><h3>Google Cloud (GCP)</h3></div><p>Compute Engine, Cloud Storage, VPC, IAM and Kubernetes Engine basics. Prepares you for Associate Cloud Engineer.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="GCP Cloud course">Get fees & syllabus</a></div>
+      <div class="course" data-cat="cloud"><div><span class="cat">Cloud & DevOps</span><h3>Cloud & DevOps</h3></div><p>Git, Jenkins CI/CD, Docker, Kubernetes, Terraform and Ansible, with an end-to-end deployment project.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Cloud & DevOps course">Get fees & syllabus</a></div>
+      <div class="course" data-cat="cloud"><div><span class="cat">Cloud & DevOps</span><h3>Microsoft 365</h3></div><p>Tenant setup, Exchange Online, Teams, SharePoint, users, licences and security policies.</p><div class="dur">1 month<small>Live online</small></div><a href="#contact" data-topic="Office 365 course">Get fees & syllabus</a></div>
+      <div class="course" data-cat="network"><div><span class="cat">Networking</span><h3>CCNA</h3></div><p>Routing, switching, VLANs, subnetting, OSPF, ACLs and NAT on Cisco devices. Prepares you for CCNA 200-301.</p><div class="dur">1.5 months<small>Live online</small></div><a href="#contact" data-topic="CCNA course">Get fees & syllabus</a></div>
+      <div class="course" data-cat="network"><div><span class="cat">Networking</span><h3>Networking Fundamentals</h3></div><p>OSI and TCP/IP models, IP addressing, DNS, DHCP, Wi-Fi and troubleshooting. The right first step before CCNA.</p><div class="dur">1 month<small>Live online</small></div><a href="#contact" data-topic="Networking course">Get fees & syllabus</a></div>
+      <div class="course" data-cat="systems"><div><span class="cat">Systems & Database</span><h3>Linux Administration</h3></div><p>Shell commands, users and permissions, storage, networking, services and shell scripting on Red Hat-based systems.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Linux course">Get fees & syllabus</a></div>
+      <div class="course" data-cat="systems"><div><span class="cat">Systems & Database</span><h3>Windows Server</h3></div><p>Active Directory, DNS, DHCP, Group Policy, file servers and Hyper-V for system administrator roles.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Windows Server course">Get fees & syllabus</a></div>
+      <div class="course" data-cat="systems"><div><span class="cat">Systems & Database</span><h3>Oracle Database (DBA)</h3></div><p>Installation, architecture, users, backup and recovery with RMAN, and performance basics. Prepares you for Oracle OCA.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Oracle DBA course">Get fees & syllabus</a></div>
+      <div class="course" data-cat="systems"><div><span class="cat">Systems & Database</span><h3>Operating Systems</h3></div><p>Installing, configuring and troubleshooting Windows and Linux desktops for support roles.</p><div class="dur">1 month<small>Live online</small></div><a href="#contact" data-topic="Operating Systems course">Get fees & syllabus</a></div>
+      <div class="course" data-cat="systems"><div><span class="cat">Systems & Database</span><h3>CompTIA A+</h3></div><p>Hardware, operating systems, networking basics and troubleshooting for IT support and helpdesk jobs.</p><div class="dur">1.5 months<small>Live online</small></div><a href="#contact" data-topic="CompTIA A+ course">Get fees & syllabus</a></div>
+      <div class="course" data-cat="systems"><div><span class="cat">Systems & Database</span><h3>Computer Hardware</h3></div><p>Assembling, upgrading and repairing desktops, laptops and printers with practical sessions.</p><div class="dur">1 month<small>Classroom / online</small></div><a href="#contact" data-topic="Hardware course">Get fees & syllabus</a></div>
+      <div class="course" data-cat="security"><div><span class="cat">Security</span><h3>CEH & Cyber Security</h3></div><p>Footprinting, scanning, system hacking, web application and network attacks, and defences. Prepares you for CEH.</p><div class="dur">3 months<small>Live online</small></div><a href="#contact" data-topic="CEH & Security course">Get fees & syllabus</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER PROGRAMS -->
+<section class="programs" id="programs">
+  <div class="wrap">
+    <h2>Career programs for a complete job switch</h2>
+    <p class="lede">Longer programs that combine several courses into one path, with projects, mock interviews and job assistance at the end.</p>
+    <div class="program-grid">
+      <div class="program"><div class="len">8<small>months</small></div><h3>SCC Certified Master in Cloud</h3><p>Linux, AWS, Azure and DevOps in one path, for cloud engineer roles.</p><a href="#contact" data-topic="Master Cloud program">Ask about this program</a></div>
+      <div class="program"><div class="len">1<small>year</small></div><h3>SCC Certified Diploma in Cloud</h3><p>Starts from networking and operating systems, then moves to multi-cloud and DevOps. Suits beginners.</p><a href="#contact" data-topic="Diploma Cloud program">Ask about this program</a></div>
+      <div class="program"><div class="len">6<small>months</small></div><h3>Network Master</h3><p>Networking fundamentals, CCNA and security basics, for network engineer roles.</p><a href="#contact" data-topic="Network Master program">Ask about this program</a></div>
+      <div class="program"><div class="len">6<small>months</small></div><h3>Server Master</h3><p>Windows Server, Linux and Microsoft 365, for system administrator roles.</p><a href="#contact" data-topic="Server Master program">Ask about this program</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="wrap">
+    <h2>How joining works</h2>
+    <div class="steps">
+      <div class="step"><h3>Talk to us</h3><p>Tell us your background and goal on a call or WhatsApp. We suggest the right course.</p></div>
+      <div class="step"><h3>Attend a free demo</h3><p>Join a live class before you pay, so you know the teaching style suits you.</p></div>
+      <div class="step"><h3>Learn with labs</h3><p>Live classes on weekdays or weekends, practice labs, assignments and doubt sessions.</p></div>
+      <div class="step"><h3>Get interview-ready</h3><p>Resume review, mock interviews and certification guidance, then job assistance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RENTAL -->
+<section class="rental" id="rental">
+  <div class="wrap rental-grid">
+    <div>
+      <h2>Laptops and desktops on rent</h2>
+      <p class="lede">Tested machines delivered and set up for your office, event or training batch. Rent for a day, a week or several months.</p>
+      <table class="config">
+        <thead><tr><th>Configuration</th><th>Best for</th><th>Rent</th></tr></thead>
+        <tbody>
+          <tr><td>Core i3 / 8 GB / SSD</td><td>Exams, data entry, basic office work</td><td><a href="#contact" data-topic="Laptop rental – i3">Get quote</a></td></tr>
+          <tr><td>Core i5 / 8–16 GB / SSD</td><td>Office staff, training batches, events</td><td><a href="#contact" data-topic="Laptop rental – i5">Get quote</a></td></tr>
+          <tr><td>Core i7 / 16 GB / SSD</td><td>Developers, designers, heavy multitasking</td><td><a href="#contact" data-topic="Laptop rental – i7">Get quote</a></td></tr>
+          <tr><td>Desktops (any of the above)</td><td>Fixed workstations and labs</td><td><a href="#contact" data-topic="Desktop rental">Get quote</a></td></tr>
+        </tbody>
+      </table>
+      <div class="areas" aria-label="Service areas"><span>Delhi</span><span>Noida</span><span>Gurgaon</span><span>Pune</span></div>
+      <div class="rental-cta">
+        <a class="btn btn-dark" href="#contact" data-topic="Laptop/Desktop rental">Get a rental quote</a>
+        <a class="btn btn-ghost" style="color:var(--board)" href="https://wa.me/919049586191?text=Hi%2C%20I%20need%20laptops%20on%20rent.%20Quantity%3A%20%20Duration%3A%20%20Location%3A" target="_blank" rel="noopener">Quote on WhatsApp</a>
+      </div>
+      <p class="note">Tell us the quantity, configuration, duration and delivery location and we will send a quote.</p>
+    </div>
+    <div class="uses">
+      <div class="use"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg><div><h3>Offices and startups</h3><p>Equip new joiners and project teams without buying. Monthly plans with replacement support.</p></div></div>
+      <div class="use"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 15.5c2.8-.8 6 1 6 4.5"/></svg><div><h3>Corporate training and onboarding</h3><p>Bulk laptops pre-loaded with the software your batch needs, delivered on the day.</p></div></div>
+      <div class="use"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><div><h3>Events, exhibitions and exams</h3><p>Short-term rentals for registrations, demos, seminars and online exam centres.</p></div></div>
+      <div class="use"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l10-4 10 4-10 4z"/><path d="M6 9v5c0 1.7 2.7 3 6 3s6-1.3 6-3V9"/></svg><div><h3>Students and freelancers</h3><p>A reliable machine for a course, a project or while your own laptop is under repair.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BUNDLE -->
+<section class="bundle">
+  <div class="wrap">
+    <div class="bundle-box">
+      <div>
+        <h2>No laptop for practice? Take a course and a rental together.</h2>
+        <p>Students who join a course can rent a lab-ready laptop for the course duration at a special combined price.</p>
+      </div>
+      <a class="btn btn-dark" href="#contact" data-topic="Course + laptop bundle">Ask about the bundle</a>
+    </div>
+  </div>
+</section>
+
+<!-- IT SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <h2>IT services for small businesses</h2>
+    <p class="lede">The same engineers who teach our courses set up and maintain IT for offices and shops.</p>
+    <div class="svc-grid">
+      <div class="svc"><h3>Cloud setup and migration</h3><p>Move email, files and applications to AWS, Azure or Microsoft 365, with backups and access control.</p></div>
+      <div class="svc"><h3>Office networking</h3><p>Routers, switches, Wi-Fi, firewalls and structured cabling, planned for your office layout.</p></div>
+      <div class="svc"><h3>Network support (AMC)</h3><p>Annual maintenance with on-call troubleshooting so your internet and systems stay up.</p></div>
+      <div class="svc"><h3>Laptop, desktop and printer repair</h3><p>Diagnosis, upgrades, OS installation and repair, at your office or ours.</p></div>
+      <div class="svc"><h3>CCTV installation and maintenance</h3><p>Camera selection, installation, DVR/NVR setup and remote viewing on your phone.</p></div>
+      <div class="svc"><h3>Website design and maintenance</h3><p>Business websites for startups and small companies, with hosting, updates and support.</p></div>
+    </div>
+    <div style="margin-top:28px"><a class="btn btn-dark" href="#contact" data-topic="IT services">Request a site visit</a></div>
+  </div>
+</section>
+
+<!-- WHY + TRAINER -->
+<section id="about" style="padding-top:0">
+  <div class="wrap why-grid">
+    <div>
+      <h2>Why students choose SCC Softech</h2>
+      <ul class="why-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><strong>Taught by working professionals</strong><span>Trainers who run real infrastructure, not only slides.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><strong>Flexible batches</strong><span>Weekday and weekend batches, online from anywhere in India or abroad.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><strong>Practice on real systems</strong><span>Labs, projects and simulations in every course.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><strong>Certification guidance</strong><span>Exam preparation for AWS, Azure, GCP, CCNA, CEH, CompTIA and Oracle.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><strong>Interview preparation and job assistance</strong><span>Resume help, mock interviews and job referrals after the course.</span></div></li>
+      </ul>
+    </div>
+    <div class="trainer">
+      <div class="trainer-top">
+        <div class="avatar" aria-hidden="true">AP</div>
+        <div><h3>Ashutosh Pandey</h3><div class="role">Founder and Lead Trainer</div></div>
+      </div>
+      <p>Ashutosh founded SCC Softech (Sanvi Computers & Cloud) in 2009 to make practical IT education accessible to everyone. He leads the cloud, server and networking programs and personally guides students through interview preparation.</p>
+      <div class="tags"><span>Cloud</span><span>Windows Server</span><span>Linux</span><span>Networking</span><span>Oracle DBA</span></div>
+      <div class="reviews-cta">Read what our students say on <a href="https://www.facebook.com/sccsoftech" target="_blank" rel="noopener">Facebook</a> and watch free lessons on <a href="https://www.youtube.com/@SCCSoftech" target="_blank" rel="noopener">YouTube</a>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="faq-list">
+      <details><summary>Are classes live or recorded?</summary><p>Classes are live online, so you can ask questions as you learn. Session recordings are shared for revision.</p></details>
+      <details><summary>I am a beginner with no IT background. Which course should I start with?</summary><p>Start with Networking Fundamentals or Operating Systems, or choose the 1-year Diploma in Cloud, which begins from the basics. Book a free demo and we will suggest a path based on your background.</p></details>
+      <details><summary>Do you provide placement?</summary><p>We provide interview preparation, resume support and job assistance, including referrals to openings we hear about. We do not promise a guaranteed job, because hiring decisions are made by employers.</p></details>
+      <details><summary>Is the certification exam fee included?</summary><p>The official exam fee (AWS, Microsoft, Cisco, EC-Council, Oracle and others) is paid to the certification body and is separate from the course fee. We guide you through registration and preparation.</p></details>
+      <details><summary>Can I pay the course fee in instalments?</summary><p>Yes, instalment options are available for longer courses and career programs. Ask us for details.</p></details>
+      <details><summary>What do I need to rent a laptop?</summary><p>A valid ID, a refundable security deposit and the delivery address. Companies can rent on a purchase order. Contact us with your quantity and duration for a quote.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Book a free demo or get a quote</h2>
+      <p class="lede">Send your details and we will reply on WhatsApp, usually within a few hours.</p>
+      <div class="contact-info">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><a href="tel:+919049586191">+91 90495 86191</a><br><span>Call or WhatsApp, Monday to Saturday</span></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg><div><a href="mailto:sccsoftechitsolutions@gmail.com">sccsoftechitsolutions@gmail.com</a></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div>Near Chinchwad Railway Station, Pune, Maharashtra 411019<br><span>Online classes across India. Rentals in Delhi, Noida, Gurgaon and Pune.</span></div></div>
+      </div>
+    </div>
+    <form id="enquiry" novalidate>
+      <h3>Send an enquiry</h3>
+      <div><label for="fName">Name</label><input id="fName" autocomplete="name" required></div>
+      <div><label for="fPhone">Phone / WhatsApp</label><input id="fPhone" type="tel" autocomplete="tel" required></div>
+      <div class="full"><label for="fTopic">I am interested in</label>
+        <select id="fTopic">
+          <option>Free demo class</option>
+          <option>AWS Cloud course</option><option>Azure Cloud course</option><option>GCP Cloud course</option><option>Cloud & DevOps course</option><option>Office 365 course</option>
+          <option>CCNA course</option><option>Networking course</option>
+          <option>Linux course</option><option>Windows Server course</option><option>Oracle DBA course</option><option>Operating Systems course</option><option>CompTIA A+ course</option><option>Hardware course</option>
+          <option>CEH & Security course</option>
+          <option>Master Cloud program</option><option>Diploma Cloud program</option><option>Network Master program</option><option>Server Master program</option>
+          <option>Laptop/Desktop rental</option><option>Laptop rental – i3</option><option>Laptop rental – i5</option><option>Laptop rental – i7</option><option>Desktop rental</option>
+          <option>Course + laptop bundle</option><option>IT services</option>
+        </select>
+      </div>
+      <div class="full"><label for="fMsg">Message (optional)</label><textarea id="fMsg" placeholder="Your background, preferred batch timing, or rental quantity, duration and location"></textarea></div>
+      <div class="full"><label for="fSource">How did you hear about us?</label>
+        <select id="fSource"><option>Google search</option><option>Google Maps</option><option>Instagram</option><option>YouTube</option><option>Facebook</option><option>Friend or colleague</option><option>Other</option></select>
+      </div>
+      <p class="form-error" id="formError" role="alert">Enter your name and a 10-digit phone number.</p>
+      <div class="full"><button class="btn btn-primary" type="submit">Send on WhatsApp</button></div>
+      <p class="form-note">This opens WhatsApp with your details filled in. Just press send.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>SCC Softech IT Solutions</h4>
+        <p style="font-size:15px">Sanvi Computers & Cloud. Live online IT training, laptop and desktop rental, and IT services since 2009.</p>
+      </div>
+      <div><h4>Learn</h4><ul><li><a href="#courses">All courses</a></li><li><a href="#programs">Career programs</a></li><li><a href="#contact">Free demo class</a></li></ul></div>
+      <div><h4>Business</h4><ul><li><a href="#rental">Laptop rental</a></li><li><a href="#rental">Desktop rental</a></li><li><a href="#services">IT services</a></li></ul></div>
+      <div><h4>Follow</h4><ul>
+        <li><a href="https://www.youtube.com/@SCCSoftech" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.instagram.com/sccsoftech/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/sccsoftech" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://twitter.com/SccSoftech" target="_blank" rel="noopener">X (Twitter)</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2009–<span id="yr">2026</span> SCC Softech IT Solutions. All rights reserved.</span><span>Pune · Delhi NCR · Online across India</span></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919049586191?text=Hi%20SCC%20Softech%2C%20I%20have%20a%20question." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9C5 9.9 9.9 5.1 16 5.1S27 9.9 27 15.8s-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.6 5.8 5 2.8 1.1 3.4.9 4 .8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.7-.4z"/></svg>
+</a>
+
+<script>
+// Mobile menu
+const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{const o=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',o)});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}));
+
+// Course filter
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-pressed','false'));
+  t.setAttribute('aria-pressed','true');
+  const f=t.dataset.filter;
+  document.querySelectorAll('#courseList .course').forEach(c=>{c.hidden=!(f==='all'||c.dataset.cat===f)});
+}));
+
+// Links that pre-select the enquiry topic
+const topicSel=document.getElementById('fTopic');
+document.querySelectorAll('[data-topic]').forEach(a=>a.addEventListener('click',()=>{
+  const v=a.dataset.topic;[...topicSel.options].forEach(o=>{if(o.text===v)topicSel.value=v});
+}));
+
+// Enquiry form -> WhatsApp
+document.getElementById('enquiry').addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=document.getElementById('fName').value.trim();
+  const phone=document.getElementById('fPhone').value.replace(/\D/g,'');
+  const err=document.getElementById('formError');
+  if(!name||phone.length<10){err.style.display='block';return}
+  err.style.display='none';
+  const msg=`Hi SCC Softech,%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AInterested in: ${encodeURIComponent(topicSel.value)}%0AFound you via: ${encodeURIComponent(document.getElementById('fSource').value)}%0A%0A${encodeURIComponent(document.getElementById('fMsg').value.trim())}`;
+  window.open(`https://wa.me/919049586191?text=${msg}`,'_blank','noopener');
+});
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+// Hero terminal: one typed lab session
+(function(){
+  const el=document.getElementById('term');
+  const lines=[
+    ['p','$ ','aws ec2 describe-instances --query "Reservations[].Instances[].State.Name"'],
+    ['ok','','[ "running", "running" ]'],
+    ['p','$ ','kubectl get pods'],
+    ['dim','','NAME                      READY   STATUS'],
+    ['ok','','web-app-7d9f8b6c5-x2kq   1/1     Running'],
+    ['p','$ ','ping -c 1 10.0.1.12'],
+    ['ok','','64 bytes from 10.0.1.12: time=0.42 ms'],
+    ['dim','','# Lab 12 complete. Next: interview drill.']
+  ];
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  if(reduce){el.innerHTML=lines.map(([c,p,t])=>p?`<span class="p">${p}</span>${esc(t)}`:`<span class="${c}">${esc(t)}</span>`).join('\n');return}
+  let html='',i=0;
+  function next(){
+    if(i>=lines.length){el.innerHTML=html+'<span class="cursor"></span>';return}
+    const [c,p,t]=lines[i++];
+    if(p){let k=0;const pre=html+`<span class="p">${p}</span>`;
+      (function type(){el.innerHTML=pre+esc(t.slice(0,k))+'<span class="cursor"></span>';
+        if(k++<t.length)setTimeout(type,22);else{html=pre+esc(t)+'\n';setTimeout(next,350)}})();
+    }else{html+=`<span class="${c}">${esc(t)}</span>\n`;el.innerHTML=html+'<span class="cursor"></span>';setTimeout(next,260)}
+  }
+  setTimeout(next,500);
+})();
+</script>
+</body>
+</html>
