@@ -133,26 +133,26 @@ header{position:sticky;top:0;z-index:50;background:rgba(244,247,246,.94);backdro
 .tabs{display:flex;flex-wrap:wrap;gap:8px}
 .tab{font-family:inherit;font-weight:600;font-size:15px;border:1.5px solid var(--line);background:var(--white);padding:8px 16px;border-radius:999px;cursor:pointer;color:var(--ink-soft)}
 .tab[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
-.course-list{border-top:2px solid var(--ink)}
-.course{display:grid;grid-template-columns:1.3fr 2fr .7fr auto;gap:24px;align-items:center;padding:22px 4px;border-bottom:1px solid var(--line)}
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.course{background:var(--white);border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;display:flex;flex-direction:column}
 .course[hidden]{display:none}
-.course h3{font-size:20px}
+.course img{width:100%;aspect-ratio:16/10;object-fit:cover;background:#DCE6E3}
+.course-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.course h3{font-size:20px;margin-top:2px}
 .course .cat{font-size:13px;font-weight:600;color:var(--board)}
-.course p{color:var(--ink-soft);font-size:15.5px}
-.course .dur{font-weight:700;font-size:15px;white-space:nowrap}
-.course .dur small{display:block;font-weight:500;color:var(--ink-soft);font-size:13px}
-.course a{font-weight:700;font-size:15px;color:var(--board);text-decoration:none;white-space:nowrap;border-bottom:2px solid var(--led)}
-@media (max-width:860px){
-  .course{grid-template-columns:1fr auto;gap:8px 16px}
-  .course p{grid-column:1/-1}
-  .course a{grid-column:1/-1;justify-self:start}
-}
+.course p{color:var(--ink-soft);font-size:15px;flex:1}
+.course .dur{font-weight:700;font-size:15px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:12px}
+.course .dur small{font-weight:500;color:var(--ink-soft);font-size:13px}
+.course a{font-weight:700;font-size:15px;color:var(--board);text-decoration:none;align-self:flex-start;border-bottom:2px solid var(--led)}
+@media (max-width:980px){.course-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.course-grid{grid-template-columns:1fr}}
 
 /* career programs */
 .programs{background:var(--ink);color:#fff}
 .programs .lede{color:#B8C4CC}
 .program-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
-.program{border:1px solid #34424F;border-radius:var(--radius-m);padding:26px 22px;display:flex;flex-direction:column;gap:12px}
+.program{border:1px solid #34424F;border-radius:var(--radius-m);padding:0 22px 26px;display:flex;flex-direction:column;gap:12px;overflow:hidden}
+.program img{width:calc(100% + 44px);margin:0 -22px 8px;aspect-ratio:16/9;object-fit:cover;background:#26333F}
 .program .len{font-family:"Bricolage Grotesque";font-size:38px;font-weight:800;color:var(--led);line-height:1}
 .program .len small{font-size:16px;font-weight:600;color:#B8C4CC;margin-left:4px}
 .program p{color:#B8C4CC;font-size:15px;flex:1}
@@ -177,6 +177,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(244,247,246,.94);backdro
 .config td{padding:14px 10px 14px 0;border-bottom:1px solid var(--line);vertical-align:top}
 .config td:first-child{font-weight:700}
 .uses{display:grid;gap:14px}
+.rental-photo{width:100%;aspect-ratio:16/8;object-fit:cover;border-radius:var(--radius-m);background:#DCE6E3}
 .use{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px;border:1px solid var(--line);border-radius:var(--radius-m);background:var(--paper)}
 .use svg{width:44px;height:44px;padding:9px;border-radius:10px;background:var(--board);color:#fff}
 .use h3{font-size:18px}
@@ -210,6 +211,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(244,247,246,.94);backdro
 .why-list strong{display:block;font-size:17.5px}
 .why-list span{color:var(--ink-soft);font-size:15.5px}
 .trainer{background:var(--white);border:1px solid var(--line);border-radius:var(--radius-m);padding:32px}
+.trainer-photo{width:calc(100% + 64px);margin:-32px -32px 24px;aspect-ratio:16/8;object-fit:cover;background:#DCE6E3}
+.trainer{overflow:hidden}
 .trainer-top{display:flex;gap:18px;align-items:center}
 .avatar{width:76px;height:76px;border-radius:50%;background:var(--board);color:#fff;display:grid;place-items:center;font-family:"Bricolage Grotesque";font-size:28px;font-weight:800;flex:none}
 .trainer h3{font-size:24px}
@@ -353,21 +356,21 @@ footer a:hover{color:#fff}
       </div>
     </div>
 
-    <div class="course-list" id="courseList">
-      <div class="course" data-cat="cloud"><div><span class="cat">Cloud & DevOps</span><h3>AWS Cloud</h3></div><p>EC2, S3, VPC, IAM, RDS, load balancing and auto scaling. Prepares you for AWS Certified Solutions Architect – Associate.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="AWS Cloud course">Get fees & syllabus</a></div>
-      <div class="course" data-cat="cloud"><div><span class="cat">Cloud & DevOps</span><h3>Microsoft Azure</h3></div><p>Virtual machines, storage, networking, Entra ID and monitoring. Prepares you for Azure Administrator (AZ-104).</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Azure Cloud course">Get fees & syllabus</a></div>
-      <div class="course" data-cat="cloud"><div><span class="cat">Cloud & DevOps</span><h3>Google Cloud (GCP)</h3></div><p>Compute Engine, Cloud Storage, VPC, IAM and Kubernetes Engine basics. Prepares you for Associate Cloud Engineer.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="GCP Cloud course">Get fees & syllabus</a></div>
-      <div class="course" data-cat="cloud"><div><span class="cat">Cloud & DevOps</span><h3>Cloud & DevOps</h3></div><p>Git, Jenkins CI/CD, Docker, Kubernetes, Terraform and Ansible, with an end-to-end deployment project.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Cloud & DevOps course">Get fees & syllabus</a></div>
-      <div class="course" data-cat="cloud"><div><span class="cat">Cloud & DevOps</span><h3>Microsoft 365</h3></div><p>Tenant setup, Exchange Online, Teams, SharePoint, users, licences and security policies.</p><div class="dur">1 month<small>Live online</small></div><a href="#contact" data-topic="Office 365 course">Get fees & syllabus</a></div>
-      <div class="course" data-cat="network"><div><span class="cat">Networking</span><h3>CCNA</h3></div><p>Routing, switching, VLANs, subnetting, OSPF, ACLs and NAT on Cisco devices. Prepares you for CCNA 200-301.</p><div class="dur">1.5 months<small>Live online</small></div><a href="#contact" data-topic="CCNA course">Get fees & syllabus</a></div>
-      <div class="course" data-cat="network"><div><span class="cat">Networking</span><h3>Networking Fundamentals</h3></div><p>OSI and TCP/IP models, IP addressing, DNS, DHCP, Wi-Fi and troubleshooting. The right first step before CCNA.</p><div class="dur">1 month<small>Live online</small></div><a href="#contact" data-topic="Networking course">Get fees & syllabus</a></div>
-      <div class="course" data-cat="systems"><div><span class="cat">Systems & Database</span><h3>Linux Administration</h3></div><p>Shell commands, users and permissions, storage, networking, services and shell scripting on Red Hat-based systems.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Linux course">Get fees & syllabus</a></div>
-      <div class="course" data-cat="systems"><div><span class="cat">Systems & Database</span><h3>Windows Server</h3></div><p>Active Directory, DNS, DHCP, Group Policy, file servers and Hyper-V for system administrator roles.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Windows Server course">Get fees & syllabus</a></div>
-      <div class="course" data-cat="systems"><div><span class="cat">Systems & Database</span><h3>Oracle Database (DBA)</h3></div><p>Installation, architecture, users, backup and recovery with RMAN, and performance basics. Prepares you for Oracle OCA.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Oracle DBA course">Get fees & syllabus</a></div>
-      <div class="course" data-cat="systems"><div><span class="cat">Systems & Database</span><h3>Operating Systems</h3></div><p>Installing, configuring and troubleshooting Windows and Linux desktops for support roles.</p><div class="dur">1 month<small>Live online</small></div><a href="#contact" data-topic="Operating Systems course">Get fees & syllabus</a></div>
-      <div class="course" data-cat="systems"><div><span class="cat">Systems & Database</span><h3>CompTIA A+</h3></div><p>Hardware, operating systems, networking basics and troubleshooting for IT support and helpdesk jobs.</p><div class="dur">1.5 months<small>Live online</small></div><a href="#contact" data-topic="CompTIA A+ course">Get fees & syllabus</a></div>
-      <div class="course" data-cat="systems"><div><span class="cat">Systems & Database</span><h3>Computer Hardware</h3></div><p>Assembling, upgrading and repairing desktops, laptops and printers with practical sessions.</p><div class="dur">1 month<small>Classroom / online</small></div><a href="#contact" data-topic="Hardware course">Get fees & syllabus</a></div>
-      <div class="course" data-cat="security"><div><span class="cat">Security</span><h3>CEH & Cyber Security</h3></div><p>Footprinting, scanning, system hacking, web application and network attacks, and defences. Prepares you for CEH.</p><div class="dur">3 months<small>Live online</small></div><a href="#contact" data-topic="CEH & Security course">Get fees & syllabus</a></div>
+    <div class="course-grid" id="courseList">
+      <article class="course" data-cat="cloud"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=640&q=70" alt="Earth at night with city lights, representing global cloud networks" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Cloud & DevOps</span><h3>AWS Cloud</h3></div><p>EC2, S3, VPC, IAM, RDS, load balancing and auto scaling. Prepares you for AWS Certified Solutions Architect – Associate.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="AWS Cloud course">Get fees & syllabus</a></div></article>
+      <article class="course" data-cat="cloud"><img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=640&q=70" alt="IT engineer working in a data centre" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Cloud & DevOps</span><h3>Microsoft Azure</h3></div><p>Virtual machines, storage, networking, Entra ID and monitoring. Prepares you for Azure Administrator (AZ-104).</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Azure Cloud course">Get fees & syllabus</a></div></article>
+      <article class="course" data-cat="cloud"><img src="https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?auto=format&fit=crop&w=640&q=70" alt="Abstract digital network" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Cloud & DevOps</span><h3>Google Cloud (GCP)</h3></div><p>Compute Engine, Cloud Storage, VPC, IAM and Kubernetes Engine basics. Prepares you for Associate Cloud Engineer.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="GCP Cloud course">Get fees & syllabus</a></div></article>
+      <article class="course" data-cat="cloud"><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=640&q=70" alt="Code on a screen" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Cloud & DevOps</span><h3>Cloud & DevOps</h3></div><p>Git, Jenkins CI/CD, Docker, Kubernetes, Terraform and Ansible, with an end-to-end deployment project.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Cloud & DevOps course">Get fees & syllabus</a></div></article>
+      <article class="course" data-cat="cloud"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=640&q=70" alt="Laptop showing business dashboards" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Cloud & DevOps</span><h3>Microsoft 365</h3></div><p>Tenant setup, Exchange Online, Teams, SharePoint, users, licences and security policies.</p><div class="dur">1 month<small>Live online</small></div><a href="#contact" data-topic="Office 365 course">Get fees & syllabus</a></div></article>
+      <article class="course" data-cat="network"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=640&q=70" alt="Network patch panel with ethernet cables" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Networking</span><h3>CCNA</h3></div><p>Routing, switching, VLANs, subnetting, OSPF, ACLs and NAT on Cisco devices. Prepares you for CCNA 200-301.</p><div class="dur">1.5 months<small>Live online</small></div><a href="#contact" data-topic="CCNA course">Get fees & syllabus</a></div></article>
+      <article class="course" data-cat="network"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=640&q=70" alt="Server rack with network cabling" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Networking</span><h3>Networking Fundamentals</h3></div><p>OSI and TCP/IP models, IP addressing, DNS, DHCP, Wi-Fi and troubleshooting. The right first step before CCNA.</p><div class="dur">1 month<small>Live online</small></div><a href="#contact" data-topic="Networking course">Get fees & syllabus</a></div></article>
+      <article class="course" data-cat="systems"><img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=640&q=70" alt="Linux terminal with a sudo command" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Systems & Database</span><h3>Linux Administration</h3></div><p>Shell commands, users and permissions, storage, networking, services and shell scripting on Red Hat-based systems.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Linux course">Get fees & syllabus</a></div></article>
+      <article class="course" data-cat="systems"><img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=640&q=70" alt="Administrator at a multi-monitor workstation" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Systems & Database</span><h3>Windows Server</h3></div><p>Active Directory, DNS, DHCP, Group Policy, file servers and Hyper-V for system administrator roles.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Windows Server course">Get fees & syllabus</a></div></article>
+      <article class="course" data-cat="systems"><img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=640&q=70" alt="Rows of index-card drawers, like database records" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Systems & Database</span><h3>Oracle Database (DBA)</h3></div><p>Installation, architecture, users, backup and recovery with RMAN, and performance basics. Prepares you for Oracle OCA.</p><div class="dur">2 months<small>Live online</small></div><a href="#contact" data-topic="Oracle DBA course">Get fees & syllabus</a></div></article>
+      <article class="course" data-cat="systems"><img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=640&q=70" alt="Desktop computer and laptop on a desk" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Systems & Database</span><h3>Operating Systems</h3></div><p>Installing, configuring and troubleshooting Windows and Linux desktops for support roles.</p><div class="dur">1 month<small>Live online</small></div><a href="#contact" data-topic="Operating Systems course">Get fees & syllabus</a></div></article>
+      <article class="course" data-cat="systems"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=640&q=70" alt="Technician working on hardware with tools" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Systems & Database</span><h3>CompTIA A+</h3></div><p>Hardware, operating systems, networking basics and troubleshooting for IT support and helpdesk jobs.</p><div class="dur">1.5 months<small>Live online</small></div><a href="#contact" data-topic="CompTIA A+ course">Get fees & syllabus</a></div></article>
+      <article class="course" data-cat="systems"><img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=640&q=70" alt="Computer processor on a motherboard" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Systems & Database</span><h3>Computer Hardware</h3></div><p>Assembling, upgrading and repairing desktops, laptops and printers with practical sessions.</p><div class="dur">1 month<small>Classroom / online</small></div><a href="#contact" data-topic="Hardware course">Get fees & syllabus</a></div></article>
+      <article class="course" data-cat="security"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=640&q=70" alt="Glowing circuit board representing cyber security" loading="lazy" width="640" height="400"><div class="course-body"><div><span class="cat">Security</span><h3>CEH & Cyber Security</h3></div><p>Footprinting, scanning, system hacking, web application and network attacks, and defences. Prepares you for CEH.</p><div class="dur">3 months<small>Live online</small></div><a href="#contact" data-topic="CEH & Security course">Get fees & syllabus</a></div></article>
     </div>
   </div>
 </section>
@@ -378,10 +381,10 @@ footer a:hover{color:#fff}
     <h2>Career programs for a complete job switch</h2>
     <p class="lede">Longer programs that combine several courses into one path, with projects, mock interviews and job assistance at the end.</p>
     <div class="program-grid">
-      <div class="program"><div class="len">8<small>months</small></div><h3>SCC Certified Master in Cloud</h3><p>Linux, AWS, Azure and DevOps in one path, for cloud engineer roles.</p><a href="#contact" data-topic="Master Cloud program">Ask about this program</a></div>
-      <div class="program"><div class="len">1<small>year</small></div><h3>SCC Certified Diploma in Cloud</h3><p>Starts from networking and operating systems, then moves to multi-cloud and DevOps. Suits beginners.</p><a href="#contact" data-topic="Diploma Cloud program">Ask about this program</a></div>
-      <div class="program"><div class="len">6<small>months</small></div><h3>Network Master</h3><p>Networking fundamentals, CCNA and security basics, for network engineer roles.</p><a href="#contact" data-topic="Network Master program">Ask about this program</a></div>
-      <div class="program"><div class="len">6<small>months</small></div><h3>Server Master</h3><p>Windows Server, Linux and Microsoft 365, for system administrator roles.</p><a href="#contact" data-topic="Server Master program">Ask about this program</a></div>
+      <div class="program"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=560&q=70" alt="Students in a live training class" loading="lazy" width="560" height="320"><div class="len">8<small>months</small></div><h3>SCC Certified Master in Cloud</h3><p>Linux, AWS, Azure and DevOps in one path, for cloud engineer roles.</p><a href="#contact" data-topic="Master Cloud program">Ask about this program</a></div>
+      <div class="program"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=560&q=70" alt="Students learning together on laptops" loading="lazy" width="560" height="320"><div class="len">1<small>year</small></div><h3>SCC Certified Diploma in Cloud</h3><p>Starts from networking and operating systems, then moves to multi-cloud and DevOps. Suits beginners.</p><a href="#contact" data-topic="Diploma Cloud program">Ask about this program</a></div>
+      <div class="program"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=560&q=70" alt="Students practising on computers" loading="lazy" width="560" height="320"><div class="len">6<small>months</small></div><h3>Network Master</h3><p>Networking fundamentals, CCNA and security basics, for network engineer roles.</p><a href="#contact" data-topic="Network Master program">Ask about this program</a></div>
+      <div class="program"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=560&q=70" alt="Group of learners working on a laptop" loading="lazy" width="560" height="320"><div class="len">6<small>months</small></div><h3>Server Master</h3><p>Windows Server, Linux and Microsoft 365, for system administrator roles.</p><a href="#contact" data-topic="Server Master program">Ask about this program</a></div>
     </div>
   </div>
 </section>
@@ -422,6 +425,7 @@ footer a:hover{color:#fff}
       <p class="note">Tell us the quantity, configuration, duration and delivery location and we will send a quote.</p>
     </div>
     <div class="uses">
+      <img class="rental-photo" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=70" alt="Laptop ready for use on an office desk" loading="lazy" width="900" height="500">
       <div class="use"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg><div><h3>Offices and startups</h3><p>Equip new joiners and project teams without buying. Monthly plans with replacement support.</p></div></div>
       <div class="use"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 15.5c2.8-.8 6 1 6 4.5"/></svg><div><h3>Corporate training and onboarding</h3><p>Bulk laptops pre-loaded with the software your batch needs, delivered on the day.</p></div></div>
       <div class="use"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><div><h3>Events, exhibitions and exams</h3><p>Short-term rentals for registrations, demos, seminars and online exam centres.</p></div></div>
@@ -474,6 +478,7 @@ footer a:hover{color:#fff}
       </ul>
     </div>
     <div class="trainer">
+      <img class="trainer-photo" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=70" alt="Trainer teaching a class at a whiteboard" loading="lazy" width="900" height="500">
       <div class="trainer-top">
         <div class="avatar" aria-hidden="true">AP</div>
         <div><h3>Ashutosh Pandey</h3><div class="role">Founder and Lead Trainer</div></div>
@@ -557,7 +562,7 @@ footer a:hover{color:#fff}
         <li><a href="https://twitter.com/SccSoftech" target="_blank" rel="noopener">X (Twitter)</a></li>
       </ul></div>
     </div>
-    <div class="foot-bottom"><span>© 2009–<span id="yr">2026</span> SCC Softech IT Solutions. All rights reserved.</span><span>Pune · Delhi NCR · Online across India</span></div>
+    <div class="foot-bottom"><span>© 2009–<span id="yr">2026</span> SCC Softech IT Solutions. All rights reserved.</span><span>Pune · Delhi NCR · Online across India · Photos: Unsplash</span></div>
   </div>
 </footer>
 
